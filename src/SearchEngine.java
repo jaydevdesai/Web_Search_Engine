@@ -29,7 +29,6 @@ public class SearchEngine {
         File folder = new File("src/pages/");
         for (File file: Objects.requireNonNull (folder.listFiles ())) {
             if(file.isFile ())
-
                 invertedIndex.createFileIndex (file);
         }
         final HashMap<String, List<File>> index = invertedIndex.getIndex ();

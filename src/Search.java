@@ -53,4 +53,7 @@ public class Search {
         return temp;
     }
 
+    public static void main (String[] args) throws IOException {
+
+    }
 }

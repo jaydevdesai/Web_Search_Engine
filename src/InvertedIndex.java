@@ -12,8 +12,8 @@ public class InvertedIndex {
     Stemmer stemmer;
 
     InvertedIndex(){
-        index = new HashMap<>();
-        files = new ArrayList<>();
+        index = new HashMap<String, List<File>> ();
+        files = new ArrayList<File> ();
         stopWords = new StopWords ();
         stemmer = new Stemmer ();
     }
@@ -29,7 +29,7 @@ public class InvertedIndex {
                         if(!index.get (word).contains (file))
                             index.get (word).add (file);
                     } else {
-                        List<File> fileList = new ArrayList<>();
+                        List<File> fileList = new ArrayList<File> ();
                         fileList.add (file);
                         index.put (word, fileList);
                     }
